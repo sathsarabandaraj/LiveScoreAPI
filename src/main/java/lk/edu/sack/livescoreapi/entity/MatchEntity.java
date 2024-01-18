@@ -8,7 +8,7 @@ import java.util.List;
 
 @Data
 @Entity
-@Table(name = "match")
+@Table(name = "`match`")
 public class MatchEntity {
 
     @Id
