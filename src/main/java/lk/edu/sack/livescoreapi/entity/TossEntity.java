@@ -1,6 +1,7 @@
 package lk.edu.sack.livescoreapi.entity;
 
 import jakarta.persistence.*;
+import lk.edu.sack.livescoreapi.enums.TossDecisionEnum;
 import lombok.Data;
 
 @Data
@@ -20,6 +21,7 @@ public class TossEntity {
     @JoinColumn(name = "toss_winner_id")
     private TeamEntity tossWinner;
 
-    private String tossDecision;
+    @Enumerated(EnumType.STRING)
+    private TossDecisionEnum tossDecision = null;
 
 }
